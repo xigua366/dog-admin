@@ -6,7 +6,7 @@ import com.dog.admin.dao.PriorityDAO;
 import com.dog.admin.domain.PriorityDO;
 import com.dog.admin.domain.PriorityDTO;
 import com.dog.admin.service.PriorityService;
-import org.dogframework.boot.commons.utils.DateProvider;
+import org.dogframework.boot.commons.util.DateProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

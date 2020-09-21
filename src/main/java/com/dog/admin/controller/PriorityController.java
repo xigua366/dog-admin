@@ -4,7 +4,7 @@ import com.dog.admin.domain.PriorityDTO;
 import com.dog.admin.domain.PriorityVO;
 import com.dog.admin.service.PriorityService;
 import com.dog.admin.service.impl.Priority;
-import org.dogframework.boot.commons.utils.DateProvider;
+import org.dogframework.boot.commons.util.DateProvider;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

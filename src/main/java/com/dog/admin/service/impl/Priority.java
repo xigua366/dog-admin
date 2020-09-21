@@ -1,7 +1,7 @@
 package com.dog.admin.service.impl;
 
 import lombok.Data;
-import org.dogframework.boot.commons.utils.AbstractObject;
+import org.dogframework.boot.commons.util.AbstractObject;
 
 import java.util.ArrayList;
 import java.util.Date;

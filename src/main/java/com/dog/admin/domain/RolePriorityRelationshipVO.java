@@ -1,6 +1,6 @@
 package com.dog.admin.domain;
 
-import org.dogframework.boot.commons.utils.AbstractObject;
+import org.dogframework.boot.commons.util.AbstractObject;
 
 import java.util.Date;
 

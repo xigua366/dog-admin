@@ -2,7 +2,7 @@ package com.dog.admin.controller;
 
 import com.dog.admin.domain.*;
 import com.dog.admin.service.RoleService;
-import org.dogframework.boot.commons.utils.ObjectCloneUtils;
+import org.dogframework.boot.commons.util.ObjectCloneUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
