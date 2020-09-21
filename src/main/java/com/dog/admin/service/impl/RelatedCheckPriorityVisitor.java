@@ -11,13 +11,13 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 /**
- * 检查权限是否被关联的操作
+ * 检查权限是否被关联的访问者
  * @author yangxi
  *
  */
 @Component
 @Scope("prototype")
-public class RelatedCheckPriorityOperation implements PriorityOperation<Boolean> {  
+public class RelatedCheckPriorityVisitor implements PriorityVisitor<Boolean> {
 
 	/**
 	 * 关联检查结果
@@ -40,20 +40,22 @@ public class RelatedCheckPriorityOperation implements PriorityOperation<Boolean>
 	private AccountPriorityRelationshipDAO accountPriorityRelationshipDAO;
 	
 	/**
-	 * 访问权限树节点
+	 * 检查某个权限树节点是否被关联
 	 */
 	@Override
-	public Boolean doExecute(Priority node) throws Exception {
-		List<PriorityDO> priorityDOs = priorityDAO
-				.listChildPriorities(node.getId());
+	public Boolean visit(Priority node) throws Exception {
+
+		// 如果存在子节点，先设置权限树子节点也绑定当前访问者对象
+		List<PriorityDO> priorityDOs = priorityDAO.listChildPriorities(node.getId());
 		
 		if(priorityDOs != null && priorityDOs.size() > 0) {
 			for(PriorityDO priorityDO : priorityDOs) {
 				Priority priorityNode = priorityDO.clone(Priority.class);
-				priorityNode.execute(this); 
+				priorityNode.accept(this);
 			}
 		}
-		
+
+		// 检查权限树节点的关联情况
 		if(relateCheck(node)) {
 			this.relateCheckResult = true;
 		}

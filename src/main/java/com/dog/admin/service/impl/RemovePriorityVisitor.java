@@ -15,7 +15,7 @@ import java.util.List;
  */
 @Component
 @Scope("prototype")
-public class RemovePriorityOperation implements PriorityOperation<Boolean> { 
+public class RemovePriorityVisitor implements PriorityVisitor<Boolean> {
 
 	/**
 	 * 权限管理模块的DAO组件
@@ -28,18 +28,19 @@ public class RemovePriorityOperation implements PriorityOperation<Boolean> {
 	 * @param node 权限树节点
 	 */
 	@Override
-	public Boolean doExecute(Priority node) throws Exception {
-		List<PriorityDO> priorityDOs = priorityDAO
-				.listChildPriorities(node.getId());
-		
-		if(priorityDOs != null && priorityDOs.size() > 0) {
+	public Boolean visit(Priority node) throws Exception {
+
+		// 如果存在子节点，先设置权限树子节点也绑定当前访问者对象
+		List<PriorityDO> priorityDOs = priorityDAO.listChildPriorities(node.getId());
+		if(priorityDOs != null && !priorityDOs.isEmpty()) {
 			for(PriorityDO priorityDO : priorityDOs) {
 				Priority priorityNode = priorityDO.clone(Priority.class);
-				priorityNode.execute(this);  
+				priorityNode.accept(this);
 			}
 		}
-		
-		removePriority(node); 
+
+		// 移除当前权限树节点
+		removePriority(node);
 		
 		return true;
 	}

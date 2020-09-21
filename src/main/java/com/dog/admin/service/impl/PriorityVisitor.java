@@ -1,11 +1,11 @@
 package com.dog.admin.service.impl;
 
 /**
- * 权限操作接口
+ * 对权限树进行操作访问者接口
  * @author yangxi
  *
  */
-public interface PriorityOperation<T> { 
+public interface PriorityVisitor<T> { 
  
 	/**
 	 * 执行这个操作
@@ -13,6 +13,6 @@ public interface PriorityOperation<T> {
 	 * @return 处理结果
 	 * @throws Exception
 	 */
-	T doExecute(Priority priority) throws Exception;
+	T visit(Priority priority) throws Exception;
 	
 }

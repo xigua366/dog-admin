@@ -115,9 +115,9 @@ public class PriorityServiceImpl implements PriorityService {
 			return authorizedTree;
 		}
 		
-		QueryAuthorizedPriorityOperation operation = context.getBean(
-				QueryAuthorizedPriorityOperation.class);
-		operation.setAccountId(accountId); 
+		QueryAuthorizedPriorityVisitor visitor = context.getBean(
+				QueryAuthorizedPriorityVisitor.class);
+		visitor.setAccountId(accountId);
 		
 		authorizedTree = new ArrayList<Priority>();
 		
@@ -129,7 +129,7 @@ public class PriorityServiceImpl implements PriorityService {
 		
 		for(PriorityDO root : authorizedRoots) {
 			Priority targetRoot = root.clone(Priority.class);
-			targetRoot.execute(operation);
+			targetRoot.accept(visitor);
 			authorizedTree.add(targetRoot);
 		}
 		
@@ -220,18 +220,18 @@ public class PriorityServiceImpl implements PriorityService {
 				.clone(Priority.class);
 		
 		// 检查这个权限以及其下任何一个子权限，是否被角色或者账号给关联着
-		RelatedCheckPriorityOperation relatedCheckOperation = context.getBean(
-				RelatedCheckPriorityOperation.class);
-		Boolean relateCheckResult = priority.execute(relatedCheckOperation);
+		RelatedCheckPriorityVisitor relatedCheckVisitor = context.getBean(
+				RelatedCheckPriorityVisitor.class);
+		Boolean relateCheckResult = priority.accept(relatedCheckVisitor);
 		
 		if(relateCheckResult) {
 			return false;
 		}
 		
 		// 递归删除当前权限以及其下所有的子权限
-		RemovePriorityOperation removeOperation = context.getBean(
-				RemovePriorityOperation.class);
-		priority.execute(removeOperation);
+		RemovePriorityVisitor removeVisitor = context.getBean(
+				RemovePriorityVisitor.class);
+		priority.accept(removeVisitor);
 		
 		return true;
 	}

@@ -13,13 +13,13 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 查询授权权限的操作
+ * 查询授权权限的访问者
  * @author yangxi
  *
  */
 @Component
 @Scope("prototype")
-public class QueryAuthorizedPriorityOperation implements PriorityOperation<Boolean> {
+public class QueryAuthorizedPriorityVisitor implements PriorityVisitor<Boolean> {
 
 	/**
 	 * 账号id
@@ -33,10 +33,10 @@ public class QueryAuthorizedPriorityOperation implements PriorityOperation<Boole
 	private PriorityDAO priorityDAO;
 
 	/**
-	 * 执行这个操作
+	 * 执行查询授权权限的操作
 	 */
 	@Override
-	public Boolean doExecute(Priority priority) throws Exception { 
+	public Boolean visit(Priority priority) throws Exception {
 		List<Priority> targetChildren = new ArrayList<Priority>();
 		
 		Map<String, Object> parameters = new HashMap<String, Object>(CollectionSize.DEFAULT);
@@ -46,7 +46,7 @@ public class QueryAuthorizedPriorityOperation implements PriorityOperation<Boole
 		List<PriorityDO> children = priorityDAO.listAuthroziedByAccountId(parameters);
 		for(PriorityDO child : children) {
 			Priority targetChild = child.clone(Priority.class);
-			targetChild.execute(this);
+			targetChild.accept(this);
 			targetChildren.add(targetChild);
 		}
 		
