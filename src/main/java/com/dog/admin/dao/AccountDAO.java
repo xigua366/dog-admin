@@ -8,7 +8,7 @@ import java.util.List;
 
 /**
  * 账号管理DAO组件接口
- * @author zhonghuashishan
+ * @author yangxi
  *
  */
 public interface AccountDAO {

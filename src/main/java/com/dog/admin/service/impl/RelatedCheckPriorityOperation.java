@@ -12,7 +12,7 @@ import java.util.List;
 
 /**
  * 检查权限是否被关联的操作
- * @author zhonghuashishan
+ * @author yangxi
  *
  */
 @Component

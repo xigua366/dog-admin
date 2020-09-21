@@ -6,7 +6,7 @@ import java.util.Date;
 
 /**
  * 账号角色关系DO类
- * @author zhonghuashishan
+ * @author yangxi
  *
  */
 public class AccountRoleRelationshipDTO extends AbstractObject {

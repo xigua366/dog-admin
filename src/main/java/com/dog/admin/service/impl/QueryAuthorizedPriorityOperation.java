@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * 查询授权权限的操作
- * @author zhonghuashishan
+ * @author yangxi
  *
  */
 @Component

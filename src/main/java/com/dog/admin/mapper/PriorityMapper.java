@@ -8,7 +8,7 @@ import java.util.Map;
 
 /**
  * 权限管理模块的mapper组件
- * @author zhonghuashishan
+ * @author yangxi
  *
  */
 @Mapper

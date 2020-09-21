@@ -7,7 +7,7 @@ import java.util.Map;
 
 /**
  * 权限管理模块的DAO组件接口
- * @author zhonghuashishan
+ * @author yangxi
  *
  */
 public interface PriorityDAO {

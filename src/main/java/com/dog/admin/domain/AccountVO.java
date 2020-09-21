@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * 账号VO类
- * @author zhonghuashishan
+ * @author yangxi
  *
  */
 public class AccountVO extends AbstractObject {

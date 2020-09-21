@@ -16,7 +16,7 @@ import java.util.List;
 
 /**
  * 账号管理service组件
- * @author zhonghuashishan
+ * @author yangxi
  *
  */
 @Service

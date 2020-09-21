@@ -6,7 +6,7 @@ import java.util.Date;
 
 /**
  * 角色和权限的关联关系DO类
- * @author zhonghuashishan
+ * @author yangxi
  *
  */
 public class RolePriorityRelationshipDO extends AbstractObject {

@@ -2,7 +2,7 @@ package com.dog.admin.constant;
 
 /**
  * 权限类型
- * @author zhonghuashishan
+ * @author yangxi
  *
  */
 public class PriorityType {

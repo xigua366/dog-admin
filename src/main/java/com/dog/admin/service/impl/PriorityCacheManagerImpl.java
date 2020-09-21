@@ -9,7 +9,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * 权限缓存管理组件
- * @author zhonghuashishan
+ * @author yangxi
  *
  */
 @Component

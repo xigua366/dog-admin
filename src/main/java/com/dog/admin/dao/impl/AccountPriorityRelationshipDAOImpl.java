@@ -10,7 +10,7 @@ import java.util.List;
 
 /**
  * 账号和权限关系管理模块的DAO组件
- * @author zhonghuashishan
+ * @author yangxi
  *
  */
 @Repository

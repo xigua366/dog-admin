@@ -4,7 +4,7 @@ import java.util.List;
 
 /**
  * 权限缓存管理器
- * @author zhonghuashishan
+ * @author yangxi
  *
  */
  interface PriorityCacheManager {

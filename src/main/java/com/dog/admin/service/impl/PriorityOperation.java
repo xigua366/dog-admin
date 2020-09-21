@@ -2,7 +2,7 @@ package com.dog.admin.service.impl;
 
 /**
  * 权限操作接口
- * @author zhonghuashishan
+ * @author yangxi
  *
  */
 public interface PriorityOperation<T> { 

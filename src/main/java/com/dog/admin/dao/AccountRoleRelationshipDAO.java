@@ -6,7 +6,7 @@ import java.util.List;
 
 /**
  * 账号角色关系管理模块DAO组件接口
- * @author zhonghuashishan
+ * @author yangxi
  *
  */
 public interface AccountRoleRelationshipDAO {

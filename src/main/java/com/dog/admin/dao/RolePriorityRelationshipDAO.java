@@ -6,7 +6,7 @@ import java.util.List;
 
 /**
  * 角色和权限关系管理模块的DAO组件接口
- * @author zhonghuashishan
+ * @author yangxi
  *
  */
 public interface RolePriorityRelationshipDAO {

@@ -15,7 +15,7 @@ import java.util.List;
 
 /**
  * 权限管理模块的controller组件
- * @author zhonghuashishan
+ * @author yangxi
  *
  */
 @RestController

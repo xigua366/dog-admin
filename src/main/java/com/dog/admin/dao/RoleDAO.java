@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * 角色管理模块DAO组件接口
- * @author zhonghuashishan
+ * @author yangxi
  *
  */
 public interface RoleDAO {

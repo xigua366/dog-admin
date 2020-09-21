@@ -28,7 +28,7 @@ public class SecurityWebConfig extends WebSecurityConfigurerAdapter {
 
         http.authorizeRequests().antMatchers( "/login").permitAll();
 
-        http.authorizeRequests().anyRequest().authenticated();
+        http.authorizeRequests().anyRequest().access("@dbAuthorityServiceImpl.check(authentication,request)");
     }
 
 

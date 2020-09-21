@@ -9,7 +9,7 @@ import java.util.List;
 
 /**
  * 角色管理模块mapper组件
- * @author zhonghuashishan
+ * @author yangxi
  *
  */
 @Mapper

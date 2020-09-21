@@ -4,7 +4,7 @@ import org.dogframework.boot.commons.utils.AbstractObject;
 
 /**
  * 权限VO类
- * @author zhonghuashishan
+ * @author yangxi
  *
  */
 public class PriorityVO extends AbstractObject {

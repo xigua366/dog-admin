@@ -11,7 +11,7 @@ import java.util.List;
 
 /**
  * 账号管理DAO组件
- * @author zhonghuashishan
+ * @author yangxi
  *
  */
 @Repository

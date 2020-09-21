@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * 角色VO类
- * @author zhonghuashishan
+ * @author yangxi
  *
  */
 public class RoleVO extends AbstractObject {

@@ -8,7 +8,7 @@ import java.util.List;
 
 /**
  * 权限
- * @author zhonghuashishan
+ * @author yangxi
  *
  */
 public class Priority extends AbstractObject {

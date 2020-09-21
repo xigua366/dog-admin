@@ -8,7 +8,7 @@ import java.util.List;
 
 /**
  * 权限管理模块的service组件接口
- * @author zhonghuashishan
+ * @author yangxi
  *
  */
 public interface PriorityService {

@@ -11,7 +11,7 @@ import java.util.List;
 
 /**
  * 角色管理模块DAO组件
- * @author zhonghuashishan
+ * @author yangxi
  *
  */
 @Repository

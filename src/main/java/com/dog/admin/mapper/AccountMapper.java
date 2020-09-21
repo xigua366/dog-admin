@@ -8,7 +8,7 @@ import java.util.List;
 
 /**
  * 账号管理mapper组件
- * @author zhonghuashishan
+ * @author yangxi
  *
  */
 @Mapper

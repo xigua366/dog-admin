@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * 账号DTO类
- * @author zhonghuashishan
+ * @author yangxi
  *
  */
 public class AccountDTO extends AbstractObject {

@@ -18,7 +18,7 @@ import java.util.Map;
 
 /**
  * 权限管理模块的service组件
- * @author zhonghuashishan
+ * @author yangxi
  *
  */
 @Service

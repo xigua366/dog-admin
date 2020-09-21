@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * 角色DO类
- * @author zhonghuashishan
+ * @author yangxi
  *
  */
 public class RoleDTO extends AbstractObject {

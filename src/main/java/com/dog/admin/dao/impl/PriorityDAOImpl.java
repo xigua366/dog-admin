@@ -11,7 +11,7 @@ import java.util.Map;
 
 /**
  * 权限管理模块的DAO组件
- * @author zhonghuashishan
+ * @author yangxi
  *
  */
 @Repository

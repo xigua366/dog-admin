@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * spring容器组件
- * @author zhonghuashishan
+ * @author yangxi
  *
  */
 @Component

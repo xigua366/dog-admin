@@ -8,7 +8,7 @@ import java.util.List;
 
 /**
  * 角色管理模块service组件接口
- * @author zhonghuashishan
+ * @author yangxi
  *
  */
 public interface RoleService {

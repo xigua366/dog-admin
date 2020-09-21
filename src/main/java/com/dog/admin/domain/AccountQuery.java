@@ -2,7 +2,7 @@ package com.dog.admin.domain;
 
 /**
  * 账号查询条件
- * @author zhonghuashishan
+ * @author yangxi
  *
  */
 public class AccountQuery {

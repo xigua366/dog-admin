@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * 账号角色关系管理模块mapper组件
- * @author zhonghuashishan
+ * @author yangxi
  *
  */
 @Mapper

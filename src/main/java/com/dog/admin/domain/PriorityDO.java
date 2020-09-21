@@ -6,7 +6,7 @@ import java.util.Date;
 
 /**
  * 权限DO类
- * @author zhonghuashishan
+ * @author yangxi
  *
  */
 public class PriorityDO extends AbstractObject {

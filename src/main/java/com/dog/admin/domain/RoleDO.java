@@ -6,7 +6,7 @@ import java.util.Date;
 
 /**
  * 角色DO类
- * @author zhonghuashishan
+ * @author yangxi
  *
  */
 public class RoleDO extends AbstractObject {
